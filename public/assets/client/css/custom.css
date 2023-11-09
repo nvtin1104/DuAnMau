@@ -1,0 +1,85 @@
+#toasts {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 99999999;
+}
+
+.toast {
+  background-color: #000000;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  margin: 0.5rem;
+  z-index: 99999999;
+  opacity: 1;
+}
+
+.toast.info {
+  color: rebeccapurple;
+}
+
+.toast.success {
+  color: green;
+}
+
+.toast.error {
+  color: red;
+}
+
+#bg_loading {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.3);
+
+}
+
+@keyframes loading {
+  0%,
+  100% {
+    transform: scale(0.2);
+    background-color: #fef5ef;
+  }
+  42% {
+    background-color: #fefae0;
+  }
+  50% {
+    transform: scale(1);
+    background-color: #ffefd0;
+  }
+}
+.load-div {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0.5rem;
+  animation: loading 2.5s ease-in-out infinite;
+}
+.load-div:nth-child(0) {
+  animation-delay: 0s;
+}
+.load-div:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.load-div:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.load-div:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.load-div:nth-child(4) {
+  animation-delay: 0.8s;
+}
+.load-div:nth-child(5) {
+  animation-delay: 1s;
+}

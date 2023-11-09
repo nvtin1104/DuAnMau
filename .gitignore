@@ -1,0 +1,9 @@
+# Bỏ qua tất cả các tệp có đuôi .log
+*.log
+
+# Bỏ qua thư mục node_modules hoàn toàn
+/node_modules/
+/configs/database.php
+# Bỏ qua tệp cụ thể
+secret.txt
+configs/database.php

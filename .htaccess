@@ -1,0 +1,9 @@
+# Enable the RewriteEngine
+RewriteEngine On
+
+# Check if the requested URL does not point to a directory (!-d) and does not point to a file (!-f)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# Rewrite the URL to pass it to index.php as a parameter while preserving query strings (QSA) and stop processing further rules (L)
+RewriteRule ^(.+)$ index.php/$1 [L,QSA]
